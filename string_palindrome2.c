@@ -2,8 +2,8 @@
 int main(){
 	char str[100];
 	printf("Enter string\n");
-	scanf("%s",str);
-	int length=0,i=0,x=0,result=0;
+	fgets(str,100,stdin);
+	int length=0,i=0,result=0;
 	while(str[length]!='\0'){
 		length++;
 	}
@@ -12,16 +12,15 @@ int main(){
 		temp[length-i-1]=str[i];
 		i++;		
 	}
-	while(str[x]!='\0'){
-			if(str[x]!=temp[x]){
-				printf("String is not a palindrome");
-				result=1;
-				break;
-			}
-			x++;
+
+	for(i=0; i<length/2; i++){
+		if(str[i]!=str[length-i-1]){
+			result=1;
+			printf("String is not a palindrome\n");
+			break;
 		}
-	if(result==0){
-		printf("String is a palindrome");
+	}if(result==0){
+		printf("String is a palindrome\n");
 	}
 	return 0;
 }
