@@ -1,7 +1,9 @@
 #include <stdio.h>
 int main(){
-	char src[]="OpenAI";
-	char dest[10];
+	char src[100];
+	char dest[100];
+	printf("Enter string\n");
+	fgets(src,100,stdin);
 	int i=0;
 	while(src[i]!='\0'){
 		i++;
