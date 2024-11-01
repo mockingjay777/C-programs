@@ -1,29 +1,23 @@
 #include <stdio.h>
 int main(){
-	char str1[]="Hello_World!";
-	char str2[]="Hello_World!";
-	int i,j;
-	while(str1[i]!='\0'){
+	char str1[100];
+	char str2[100];
+	printf("Enter first string\n");
+	fgets(str1,100,stdin);
+	printf("Enter second string\n");
+	fgets(str2,100,stdin);
+	int i=0,result=0;
+	while(str1[i]!='\0'||str2[i]!='\0'){
+		if(str1[i]!=str2[i]){
+			result=1;		
+			break;
+		}
 		i++;
 	}
-	while(str2[j]!='\0'){
-		j++;
-	}
-	int result=0,x=0;
-	if(i==j){
-		while(str1[x]!='\0'){
-			if(str1[x]!=str2[x]){
-				printf("Not equal");
-				result=1;
-				break;
-			}
-			x++;
-		}
-		if(result==0){
-			printf("Equal");
-		}
+	if(result==0){
+		printf("Equal\n");
 	}else{
-		printf("Not equal");
+		printf("Not equal\n");
 	}
 	return 0;
 }
