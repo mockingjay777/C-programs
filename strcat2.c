@@ -1,22 +1,22 @@
 #include <stdio.h>
 int main(){
-	char str1[]="Hello, ";
-	char str2[]="World!";
-	char str[20];
-	int i=0,j=0,x;
+	char str1[100];
+	char str2[100];
+	printf("Enter first string\n");
+	fgets(str1,100,stdin);
+	printf("Enter second string\n");
+	fgets(str2,100,stdin);
+	int i=0,j=0;
 	while(str1[i]!='\0'){
 		i++;
 	}
 	while(str2[j]!='\0'){
+		str1[i]=str2[j];
+		i++;
 		j++;
 	}
-	for(x=0; x<i; x++){
-		str[x]=str1[x];
-	}
-	for(x=i; x<=(i+j); x++){
-		str[x]=str2[x-i];
-	}
+
 	
-	printf("Final concatenated string: %s",str);
+	printf("Final concatenated string: %s",str1);
 	return 0;
 }
