@@ -11,4 +11,5 @@ int main(){
 void add(int a,int b){
 	int ans=a+b;
 	printf("%d + %d = %d \n",a,b,ans);
+	return;
 }
