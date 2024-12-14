@@ -1,0 +1,6 @@
+POINTERS
+
+Multiplication/addition of two matrices using pointers
+Minimum of array 
+Max of array 
+Standard deviation of an array value 
